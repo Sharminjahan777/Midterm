@@ -5,13 +5,16 @@ A.
 What jdk contains or composed of and define each components?
 A.
 What is IDE?
-A.
+A.Integrated Development Environment.
 What are the IDEs available in the market to support java?
 Explain the entire java life cycle.
 what is class?
+Class is a blueprint of an object.
 What is object?
 What is the entry point of an application?
+Main method.
 Why main is static?
+Because main is called by the JVM
 Which class is the superclass of all classes?
 What is difference between path and classpath variables?
 What is the difference between an Interface and Abstract class?

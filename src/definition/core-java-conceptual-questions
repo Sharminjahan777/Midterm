@@ -6,8 +6,6 @@ What jdk contains or composed of and define each components?
 A.
 What is IDE?
 Integrated Development Environment.
-
-A.Integrated Development Environment.
 What are the IDEs available in the market to support java?
 Explain the entire java life cycle.
 what is class?
@@ -38,7 +36,9 @@ If we don't have a constructor declared, what is called during the object creati
 What is "this" keyword in java ?
 What is "super" keyword in java? How many possible way can you use?
 What is JVM stand for ?
+Java Virtual Machine.
 Is JVM platform independent?
+Yes.
 What version of java are you using?
 What is JAR stand for ?
 What is the difference between JDK and JVM?
@@ -52,7 +52,9 @@ What is Serialization and Deserialization?
 when to use transient variable in java?
 Difference between while and do..while loop?
 What is Enum?
+
 What is Iterator?
+Interface java.util.Iterator. ... Iterator takes the place of Enumeration in the Java collections framework. Iterators differ from Enumerations in two ways: Iterators allow the caller to remove elements from the underlying collection during the iteration with well-defined semantics. Method names have been improved.
 Which one will take more memory, an int or Integer?
 Why is String Immutable in Java?
 What is constructor chaining in Java?

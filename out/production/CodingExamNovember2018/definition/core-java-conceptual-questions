@@ -5,7 +5,7 @@ A.
 What jdk contains or composed of and define each components?
 A.
 What is IDE?
-A.Integrated Development Environment.
+Integrated Development Environment.
 What are the IDEs available in the market to support java?
 Explain the entire java life cycle.
 what is class?
@@ -14,8 +14,9 @@ What is object?
 What is the entry point of an application?
 Main method.
 Why main is static?
-Because main is called by the JVM
+Because main is called by the JVM before any objects are made.
 Which class is the superclass of all classes?
+
 What is difference between path and classpath variables?
 What is the difference between an Interface and Abstract class?
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
@@ -35,7 +36,9 @@ If we don't have a constructor declared, what is called during the object creati
 What is "this" keyword in java ?
 What is "super" keyword in java? How many possible way can you use?
 What is JVM stand for ?
+Java Virtual Machine.
 Is JVM platform independent?
+Yes.
 What version of java are you using?
 What is JAR stand for ?
 What is the difference between JDK and JVM?
@@ -49,7 +52,9 @@ What is Serialization and Deserialization?
 when to use transient variable in java?
 Difference between while and do..while loop?
 What is Enum?
+
 What is Iterator?
+Interface java.util.Iterator. ... Iterator takes the place of Enumeration in the Java collections framework. Iterators differ from Enumerations in two ways: Iterators allow the caller to remove elements from the underlying collection during the iteration with well-defined semantics. Method names have been improved.
 Which one will take more memory, an int or Integer?
 Why is String Immutable in Java?
 What is constructor chaining in Java?
@@ -62,10 +67,14 @@ What is reflection in java and why is it useful?
 what is multithreading in java?
 What is the use of synchronization in Java?
 What is Framework?
+ A software framework, in computer programming, is an abstraction in which common code providing generic functionality can be selectively overridden or specialized by user code providing specific functionality.
 What are the testing Framework available in java?
+Mockito is designed as a open source testing framework for Java which is available under a MIT License. Mockito allows programmers to create and test double objects (mock objects) in automated unit tests for the purpose of Test-driven Development (TDD) or Behavior Driven Development.
 Difference between jUnit and testNG?
+
 What are the dependencies for this project?
 what is dependency injection in java?
+
 What is static binding and dynamic binding?
 
 

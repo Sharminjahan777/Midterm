@@ -4,6 +4,20 @@ package math.problems;
  * Created by mrahman on 04/02/18.
  */
 public class Factorial {
+    public static int recFactorial(int n){
+        if(n == 0){
+            return 1;
+        }
+        return n * recFactorial(n-1);
+    }
+
+    public static int Factorial(int n){
+        int total = n;
+        for (int i = n-1; i >=1;i--){
+            total = total*i;
+        }
+        return total;
+    }
 
     public static void main(String[] args) {
         /*
@@ -11,26 +25,9 @@ public class Factorial {
          * Write a java program to find Factorial of a given number using Recursion as well as Iteration.
          *
          */
-        long i,frl=1;
-        long number=5;//It is the number to calculate factorial
 
-        for(i=1;i<=number;i++){
-            frl=frl*i;
-        }
-        System.out.println("Factorial of "+number+" is: "+frl);
-
-        // using recursion
-        System.out.println("Factorial of 5 is: "+factorial(5));
+        System.out.println(recFactorial(5));
+        System.out.println(Factorial(5));
 
     }
-    // Get factorial using recursion
-    // method in class level
-    static int factorial(int n){
-        if (n == 0)
-            return 1;
-        else
-            return(n * factorial(n-1));
-    }
-
-
 }

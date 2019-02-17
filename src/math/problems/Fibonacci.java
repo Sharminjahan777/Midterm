@@ -1,33 +1,17 @@
 package math.problems;
 
-import java.util.ArrayList;
-
+import java.util.Arrays;
 
 public class Fibonacci {
     public static void main(String[] args) {
-         /*
-          Write 40 Fibonacci numbers with java.
-         */
-        int fab[] = new int[40];
-        System.out.println(arrayFibo(fab));
-    }
-
-    public static ArrayList<Integer> arrayFibo(int fab[]) {
-
-        ArrayList<Integer> ar = new ArrayList<>();
-
-        for (int m = 0; m < fab.length; m++) {
-            if (m < 2) {
-                fab[m] = m;
-                ar.add(fab[m]);
-
-            } else {
-                fab[m] = fab[m - 2] + fab[m - 1];
-                ar.add(fab[m]);
+        int [] fibo = new int[40];
+        for (int i = 0; i < 40; i++) {
+            if(i<2) {
+                fibo[i] = i;
+            }else{
+                fibo[i] = fibo [i-2]+ fibo[i-1];
             }
         }
-
-        return ar;
+        System.out.println(Arrays.toString(fibo));
     }
-
 }

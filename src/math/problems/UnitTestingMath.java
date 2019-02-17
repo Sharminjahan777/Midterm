@@ -2,63 +2,23 @@ package math.problems;
 
 import org.testng.Assert;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class UnitTestingMath {
     public static void main(String[] args) {
         //Apply Unit testing into each classes and methods in this package.
 
-        try {//unit testing for Factorial
-            Assert.assertEquals(Factorial.factorial(5), 120);
-            System.out.println("Unit testing passed for factorial");
-        }catch (AssertionError ar){
-            System.out.println("Unit testing failed for factorial");
-        }
+        Assert.assertEquals(9591,PrimeNumber.primeCount());
 
-        try {//unit testing for Fibonacci
-            ArrayList<Integer> expectedArray = new ArrayList<>(Arrays.asList(0, 1, 1, 2, 3, 5, 8, 13, 21, 34));
-            int fab[] = new int[10];
-            Assert.assertEquals(Fibonacci.arrayFibo(fab), expectedArray);
-            System.out.println("Unit testing passed for fibonacci");
-        }catch (AssertionError as){
-            System.out.println("Unit testing failed for fibonacci");
-        }
+        int  array[] = new int[]{211,110,99,34,67,89,67,456,321,456,78,90,45,32,56,78,90,54,32,123,67,5,679,54,32,65};
+        Assert.assertEquals(5,LowestNumber.findLowestNum(array));
 
-        try {//unit testing for FindLowestDifference
-            int[] array1 = { 5, 9, 2, 20, 33, 1};
-            int[] array2 = {17, 36, 14, 19};
-            Assert.assertEquals(FindLowestDifference.lowestDifference(array1,array2),13);
-            System.out.println("Unit testing passed for FindLowestDifference");
-        }catch (AssertionError as){
-            System.out.println("Unit testing failed for FindLowestDifference");
-        }
+        int [] array2 = new int[]{10, 2, 1, 4, 5, 3, 7, 8, 6};
+        Assert.assertEquals(9,FindMissingNumber.missingNumber(array2,10));
 
-        try{//Unit testing for missing number
-            int [] array = new int[]{10, 2, 1, 4, 5};
-            int n = 6;
-            Assert.assertEquals(FindMissingNumber.missingNumber(array,n),5);
-            System.out.println("Unit testing passed for FindMissingNumber");
-        }catch (AssertionError as){
-            System.out.println("Unit testing failed for FindMissingNumber");
-        }
+        int [] array3 = {30,12,5,9,2,20,33,1};
+        int [] array4 = {18,25,41,47,17,36,14,19};
+        Assert.assertEquals(1,FindLowestDifference.lowestDiff(array3,array4));
 
-        try{// unit testing for lowest number
-            int  array[] = new int[]{5,679,54,32,65};
-            Assert.assertEquals(LowestNumber.lowestNumber(array),5);
-            System.out.println("Unit testing passed for LowestNumber");
-        }catch (AssertionError as){
-            System.out.println("Unit testing failed for LowestNumber");
-        }
-
-        try {//unit testing for Pattern
-            int n = 10;
-
-            ArrayList<Integer> expectedArray = new ArrayList<>(Arrays.asList(10, 9, 8, 7, 6, 5, 4, 3, 2, 1));
-            Assert.assertEquals(Pattern.arrayList(n), expectedArray);
-            System.out.println("Unit testing passed for Pattern");
-        }catch (AssertionError as){
-            System.out.println("Unit testing failed for Pattern");
-        }
+        Assert.assertEquals(120,Factorial.Factorial(5));
+        Assert.assertEquals(120,Factorial.recFactorial(5));
     }
 }

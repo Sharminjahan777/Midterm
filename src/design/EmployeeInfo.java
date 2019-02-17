@@ -2,82 +2,222 @@ package design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo {
-	
- /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
- * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
- * then inherit that abstract class into EmployeeInfo class.Once you done with designing EmployeeInfo class,
- * go to FortuneEmployee class to apply all the fields and attributes.
- * 
- * Important: YOU MUST USE the 
- * OOP(abstraction,Encapsulation, Inheritance and Polymorphism) concepts in every level possible.
- * Use all kind of keywords(super,this,static,final........)
- * Implement Nested class.
- * Use Exception Handling.
- *
- */
+public class EmployeeInfo extends WhoWeAre implements Employee {
 
-	/*
-	 * declare few static and final fields and some non-static fields
-	 */
+	/* Exception Handling is not used */
+
 	static String companyName;
-	
-	/*
-	 * You must implement the logic for below 2 methods and 
-	 * following 2 methods are prototype as well for other methods need to be design,
-	 * as you will come up with the new ideas.
-	 */
-	
-	/*
-	 * you must have multiple constructor.
-	 * Must implement below constructor.
-	 */
-	public EmployeeInfo(int employeeId){
-		
+
+	private int empID;
+	private String empName;
+	private double monthlySalary;
+	private String department;
+	private char sex;
+	private boolean usaCitizen;
+	private int performance;
+
+	//default constructor
+	public EmployeeInfo() {
 	}
-    public EmployeeInfo(String name, int employeeId){
-		
+
+	//parameterized constructor created
+	public EmployeeInfo(int empID, String empName, String department) {
+		this.empID = empID;
+		this.empName = empName;
+		this.department = department;
+		System.out.println("Beth Israel's president's id :" + empID + ", Name: " + empName + ", Department: " + department);
 	}
-	
-	/*
-	 * This methods should calculate Employee bonus based on salary and performance.
-	 * Then it will return the total yearly bonus. So you need to implement the logic.
-	 * Hints: 10% of the salary for best performance, 8% of the salary for average performance and so on. 
-	 * You can set arbitrary number for performance.
-	 * So you probably need to send 2 arguments.
-	 * 
-	 */
-	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
-		int total=0;
+
+	public EmployeeInfo(int empID, String empName, String department, double monthlySalary, char sex, boolean usaCitizen, int performance) {
+		this.empID = empID;
+		this.empName = empName;
+		this.department = department;
+		this.monthlySalary = monthlySalary;
+		this.sex = sex;
+		this.usaCitizen = usaCitizen;
+		this.performance = performance;
+		System.out.println("\nHospital's present CEO's id :" + empID + ", Name: " + empName + ". He is from: " + department + ". His Yearly salary is $: " + monthlySalary * 12 + ". His sex is: " + sex + ", definitely USACitizen status: " + usaCitizen + ". His performance rating is: " + performance);
+	}
+
+	//Getter setter method for encapsulation
+	public int getEmpID() {
+		return empID;
+	}
+
+	public void setEmpID(int empID) {
+		this.empID = empID;
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	public double getMonthlySalary() {
+		return monthlySalary;
+	}
+
+	public void setMonthlySalary(double monthlySalary) {
+		this.monthlySalary = monthlySalary;
+	}
+
+	public char getSex() {
+		return sex;
+	}
+
+	public void setSex(char sex) {
+		this.sex = sex;
+	}
+
+	public boolean isUsaCitizen() {
+		return usaCitizen;
+	}
+
+	public void setUsaCitizen(boolean usaCitizen) {
+		this.usaCitizen = usaCitizen;
+	}
+
+	public float getPerformance() {
+		return performance;
+	}
+
+	public void setPerformance(int performance) {
+		this.performance = performance;
+	}
+
+	//EmployeeInfo class extends Abstract class method and implements methods of Interface below
+
+	@Override
+	public int employeeId() {
+		return 0;
+	}
+
+	@Override
+	public String employeeName() {
+		return null;
+	}
+
+	@Override
+	public void assignDepartment() {
+	}
+
+	@Override
+	public int calculateYearlySalary() {
+		int yearlySalary = (int) (12 * monthlySalary);  //after casting to int from double
+		return yearlySalary;
+	}
+
+	@Override
+	public void benefitLayout() {
+		System.out.println("Benefit for Mount Sinai Health System is the best among all the hospitals in NY");
+	}
+
+	@Override
+	public void hospitalDescription() {
+		System.out.println("Hospital's mission: " + mission + "\nHospital's vision: " + vision);
+	}
+
+	//additional method implemented
+	public void healthInsurance() {
+		System.out.println("All the employees get free health benefits without some exception\n");
+	}
+
+	//parameterized constructor (implemented)
+	public EmployeeInfo(int employeeId) {
+		this.empID = employeeId;
+	}
+
+	public EmployeeInfo(String name, int employeeId) {
+		this.empName = name;
+		this.empID = employeeId;
+	}
+
+//	public double calculateSalary() { //we don't need it
+//		double salary = this.monthlySalary;
+//		double yearlySalary = salary * 12;
+//		return yearlySalary;
+//	}
+
+	//Method overloading (Polymorphism)
+	public static int calculateEmployeeYearlyBonus(int numberOfYearsWithCompany) {
+		int total = 0;
 		return total;
 	}
-	
-	/*
-	 * This methods should calculate Employee Pension based on salary and numbers of years with the company.
-	 * Then it will return the total pension. So you need to implement the logic.
-	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
-	 * 
-	 */
-	public static int calculateEmployeePension(){
-		int total=0;
-		Scanner sc  = new Scanner(System.in);
+
+	public double calculateEmployeeYearlyBonus(double salary, int performance) {
+		this.monthlySalary = salary;
+		this.performance = performance;
+		double yearlyBonus = 0;
+		if (performance == 5) {
+			yearlyBonus = salary * 0.1 * 12;
+		} else if (performance == 4) {
+			yearlyBonus = salary * 0.08 * 12;
+		} else if (performance == 3) {
+			yearlyBonus = salary * 0.06 * 12;
+		} else if (performance == 2) {
+			yearlyBonus = 0;
+			System.out.println("Your performance is poor, improve your performance.");
+		} else if (performance == 1) {
+			yearlyBonus = 0;
+			System.out.println("You are fired.");
+		}
+		return yearlyBonus;
+	}
+
+	public int calculateEmployeeMonthlyPension(double salary) {
+		int total = 0;
+		Scanner sc = new Scanner(System.in);
 		System.out.println("Please enter start date in format (example: May,2015): ");
 		String joiningDate = sc.nextLine();
 		System.out.println("Please enter today's date in format (example: August,2017): ");
 		String todaysDate = sc.nextLine();
-        String convertedJoiningDate = DateConversion.convertDate(joiningDate);
-        String convertedTodaysDate = DateConversion.convertDate(todaysDate);
+		String convertedJoiningDate = DateConversion.convertDate(joiningDate);
+		String convertedTodaysDate = DateConversion.convertDate(todaysDate);
+		String startYear = convertedJoiningDate.substring(convertedJoiningDate.length() - 4, convertedJoiningDate.length());
+		String currentYear = convertedTodaysDate.substring(convertedTodaysDate.length() - 4, convertedTodaysDate.length());
 
-        //implement numbers of year from above two dates
+		int start = Integer.parseInt(startYear);
+		int current = Integer.parseInt(currentYear);
+
 		//Calculate pension
+		int numberOfYears = current - start;
+
+		if (numberOfYears >= 5) {
+			total = (int) (salary * .25);
+		} else if (numberOfYears == 4) {
+			total = (int) (salary * .20);
+		} else if (numberOfYears == 3) {
+			total = (int) (salary * .15);
+		} else if (numberOfYears == 2) {
+			total = (int) (salary * .10);
+		} else if (numberOfYears == 1) {
+			total = (int) (salary * .05);
+		} else if (numberOfYears == 0) {
+			total = 0;
+		}
+		System.out.println("Your Monthly pension according to staying with us: $" + total + "\n");
 
 		return total;
 	}
-	private static class DateConversion {
 
-		public DateConversion(Months months){}
+	private static class DateConversion { //nested class!
+
+		public DateConversion(Months months) {
+		}
+
 		public static String convertDate(String date) {
-			String [] extractMonth = date.split(",");
+			String[] extractMonth = date.split(",");
 			String givenMonth = extractMonth[0];
 			int monthDate = whichMonth(givenMonth);
 			String actualDate = monthDate + "/" + extractMonth[1];
@@ -107,29 +247,28 @@ public class EmployeeInfo {
 					date = 6;
 					break;
 				case July:
-					date = 1;
+					date = 7;
 					break;
 				case August:
-					date = 1;
+					date = 8;
 					break;
 				case September:
-					date = 1;
+					date = 9;
 					break;
 				case October:
-					date = 1;
+					date = 10;
 					break;
 				case November:
-					date = 1;
+					date = 11;
 					break;
 				case December:
-					date = 1;
+					date = 12;
 					break;
 				default:
 					date = 0;
 					break;
 			}
 			return date;
-
 		}
 	}
 }
